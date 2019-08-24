@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #box{
+                /* 
+                //厘米
+                width: 10cm;
+                height: 10cm; 
+                */
+
+                /* 
+                //毫米
+                width: 10mm;
+                height: 10mm; 
+                */
+                /*像素
+                width: 100px;
+                height: 100px;
+                */
+
+
+            /*vm=viewWidth   范围是0~100   表示占可视窗口的宽度百分比，与父级多宽无关 
+              vh=viewHeight   范围是0~100   表示占可视窗口的高度百分比，与父级多高无关
+                width: 100vw;
+                height: 50vw;
+             */   
+
+             /* 占父级的百分比*/
+                width: 100%;
+                height: 50vh;
+                background: rgba(0,0,0,0.7); 
+            }
+        </style>
+        <script>
+            /*
+                position属性值:
+                fixed:固定定位   不会随鼠标的滚动消失
+                absolute:绝对定位    
+                relative:相对定位 
+                static:静态定位
+            */
+        </script>
+    </head>
+    <body>
+        <div style="width:50px;">
+            <div id="box"></div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,47 @@
+//全局变量  --  全文都能用
+@width:1000px;
+@height:100;
+@px:1px;
+@style:dashed;
+@red:red;
+@blue:blue;
+@yellow:yellow;
+@green:green;
+*{
+    box-sizing: border-box;
+}
+.box{
+    width: @width;
+    height: @height*1px;
+    *{
+        float: left;
+    }
+    .box1{
+        width: 100px;
+        height: 100px;
+        background-color: @yellow;
+        border: @px @style @blue;
+    }
+    .box2{
+        width: 100px;
+        height: @height*1px;
+        background-color: @red;
+    }
+    .box3{
+        width: 100px;
+        height: 100px;
+        background-color: @green;
+    }
+    .box4{
+        width: 100px;
+        height: 100px;
+        background-color: @red;
+    }
+    .box5{
+        //局部变量 -- 只能在自己的作用域下使用
+        @width:100px;
+        width: @width;
+        height: 100px;
+        background-color: @blue;
+    }
+}

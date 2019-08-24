@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .block {
+            display: block;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+        
+        .inline-block {
+            display: inline-block;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background-color: aqua;
+            position: relative;
+        }
+        
+        .flex {
+            display: flex;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+        
+        .inherit-father {
+            display: inline;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+        
+        .inherit-father .inherit-child {
+            display: inherit;
+        }
+        
+        .ruby {
+            display: ruby;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        我是 block
+    </div>
+    <hr>
+
+    <div class="inline">
+        我是 inline
+    </div>
+    <hr>
+
+    <div class="inline-block">
+        我是 inline-block
+    </div>
+    <hr>
+
+    <div class="flex">
+        我是 flex
+    </div>
+    <hr>
+
+    <div class="inherit-father">
+        我是 父亲
+        <div class="inherit-child">
+            我继承父类的display属性
+        </div>
+    </div>
+    <hr>
+
+    <div class="ruby">
+        我是 flex
+    </div>
+    <hr>
+
+
+</body>
+
+</html>

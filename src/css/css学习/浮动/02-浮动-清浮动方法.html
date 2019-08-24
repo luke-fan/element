@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid red;
+        }
+        
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: #aaaaaa;
+            float: left;
+        }
+        
+        .clearfix {
+            /* clear: both; */
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item">111</div>
+        <div class="d1">2222</div>
+    </div>
+    <script>
+        console.log();
+
+        /*
+            若子元素浮动，则不会撑开父级的高度
+        */
+        var item = document.querySelector('.item');
+        var d1 = document.querySelector('.d1');
+        item.onclick = function() {
+            /*
+                在其左右加空标签清浮动
+            */
+            d1.classList.add('clearfix');
+        }
+    </script>
+
+</body>
+
+</html>

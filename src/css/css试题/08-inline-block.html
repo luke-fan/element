@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #inline p{
+            display: inline;
+            background-color:red ;
+            width:300px;/*这里设置无用*/
+        }
+        #inline-block p{
+            display: inline-block;
+            background-color:red ;
+            width:100px;
+            padding:10px;
+        }
+        #block p{
+            display: block;
+            background-color: red;
+            width:100px;
+            padding:20px;
+        }
+        div{
+            margin:20px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+     <div id="inline">
+        display:inline 在同一行，并且宽度就等于文字内容的宽度且设置宽度无用<p>内容内容内容内容内容内容内容</p>内容内容内容内容内容内容
+     </div>
+     <div id="inline-block">
+        display:inline-block  既有行级元素的特性，也有块级元素的特性，因此在同一行，能设置宽高，margin，padding<p>内容内容内容内容内容内容内容</p>内容内容内容内容内容内容
+     </div>
+     <div id="block">
+        display:block 块级元素会自动换新行，占领一行,可以设置宽高，margin，padding <p>内容内容内容内容内容内容内容</p>内容内容内容内容内容内容
+     </div>
+</body>
+</html>

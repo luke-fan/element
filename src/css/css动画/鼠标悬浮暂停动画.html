@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .play-state {
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            text-align: center;
+            line-height: 94px;
+            border: 3px solid #e1efde;
+            border-radius: 50%;
+            animation: play-state 3s linear infinite;
+            cursor: pointer;
+        }
+        /* 鼠标悬浮时暂停 */
+        
+        .play-state:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes play-state {
+            0% {
+                margin-left: 0;
+            }
+            100% {
+                margin-left: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="play-state">
+        暂停
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #d1{
+                width: 100px;
+                height: 100px;
+                background:red;
+                transition: 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">
+
+        </div>
+        <script>
+            var d1=document.getElementById('d1');
+            d1.onmouseover=function(){
+                //d1.style.transform='scale(0,0)';
+                //d1.style.transform='translate(90px,90px)';
+
+                //d1.style.transform='rotate(60deg)';
+                  d1.style.opacity=0.5;
+            }
+        </script>
+    </body>
+</html>

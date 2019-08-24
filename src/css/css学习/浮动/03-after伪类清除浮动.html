@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix:after {
+            /*content内容有after伪类生成的文字*/
+            content: "";
+            display: block;
+            clear: both;
+            *zoom: 1;
+        }
+        
+        .box {
+            border: 1px solid blue;
+        }
+        
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item"></div>
+    </div>
+    <script>
+        console.log();
+        /*
+            给浮动元素的父级添加clearfix   
+            即可消除子元素的浮动
+        
+        */
+
+        var item = document.querySelector('.item');
+        var box = document.querySelector('.box');
+        //点击事件清浮动
+        item.onclick = function() {
+            box.classList.add('clearfix');
+        }
+    </script>
+</body>
+
+</html>

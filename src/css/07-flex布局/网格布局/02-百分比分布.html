@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .Grid {
+            display: flex;
+        }
+        
+        .Grid-cell {
+            flex: 1;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: aqua;
+            border: 1px solid #aaaaaa;
+        }
+        
+        .Grid-cell.u-full {
+            flex: 0 0 100%;
+        }
+        
+        .Grid-cell.u-1of2 {
+            flex: 0 0 50%;
+        }
+        
+        .Grid-cell.u-1of3 {
+            flex: 0 0 33.3333%;
+        }
+        
+        .Grid-cell.u-1of4 {
+            flex: 0 0 25%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="Grid">
+        <div class="Grid-cell u-1of4">1</div>
+        <div class="Grid-cell">2</div>
+        <div class="Grid-cell u-1of3">3</div>
+    </div>
+</body>
+
+</html>

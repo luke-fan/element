@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #grad1 {
+            height: 100px;
+            background: -webkit-linear-gradient(0deg, yellow, green);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(0deg, yellow, green);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(0deg, yellow, green);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(0deg, yellow, green);
+            /* 标准的语法（必须放在最后） */
+        }
+        
+        #grad2 {
+            height: 100px;
+            background: -webkit-linear-gradient(90deg, yellow, green);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(90deg, yellow, green);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(90deg, yellow, green);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(90deg, yellow, green);
+            /* 标准的语法（必须放在最后） */
+        }
+        
+        #grad3 {
+            height: 100px;
+            background: -webkit-linear-gradient(180deg, yellow, green);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(180deg, yellow, green);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(180deg, yellow, green);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(180deg, yellow, green);
+            /* 标准的语法（必须放在最后） */
+        }
+        
+        #grad4 {
+            height: 100px;
+            background: -webkit-linear-gradient(-90deg, yellow, green);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(-90deg, yellow, green);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(-90deg, yellow, green);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(-90deg, yellow, green);
+            /* 标准的语法（必须放在最后） */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>线性渐变 - 使用不同的角度</h3>
+    <div id="grad1" style="color:white;text-align:center;">0deg-从下到上</div><br>
+    <div id="grad2" style="color:white;text-align:center;">90deg-从左到右</div><br>
+    <div id="grad3" style="color:white;text-align:center;">180deg-从上到下</div><br>
+    <div id="grad4" style="color:white;text-align:center;">-90deg-从右到左</div>
+
+    <p><strong>注意：</strong> Internet Explorer 9 及之前的版本不支持渐变。</p>
+
+</body>
+
+</html>

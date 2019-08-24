@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>判断鼠标进入方向</title>
+</head>
+
+<body>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #wrap {
+            width: 300px;
+            height: 300px;
+            background: #33aa00;
+            margin: 50px;
+            display: inline-block;
+            font-size: 50px;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+    <div id="wrap">
+        方向反馈
+    </div>
+    <script type="text/javascript" src="../../工作/js/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+        $("#wrap").bind("mouseenter mouseleave",
+            function(e) {
+                var w = $(this).width();
+                var h = $(this).height();
+                var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+                var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+                var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+                var eventType = e.type;
+                //  console.log(eventType);
+                var dirName = new Array('上方', '右侧', '下方', '左侧');
+                if (e.type == 'mouseenter') {
+                    $(this).html(dirName[direction] + '进入');
+                } else {
+                    $(this).html(dirName[direction] + '离开');
+                }
+            });
+    </script>
+</body>
+
+</html>

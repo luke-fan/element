@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        img {
+            border: none;
+            display: block;
+        }
+        
+        .box-3d {
+            width: 170px;
+            height: 170px;
+            perspective: 1000px;
+            margin: 50px;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .box-3d-content {
+            width: 170px;
+            height: 170px;
+            position: relative;
+            transform-origin: 50%;
+            transition: transform 0.5s linear;
+            transform-style: preserve-3d;
+        }
+        
+        .box-3d-content img {
+            width: 100%;
+            height: 100%;
+            background-color: #efeff2;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .box-3d-content img:nth-child(1) {
+            transform: translateZ(84px);
+        }
+        
+        .box-3d-content img:nth-child(2) {
+            transform: rotateY(90deg) translateZ(84px);
+        }
+        
+        .box-3d-content img:nth-child(3) {
+            transform: rotateY(-90deg) translateZ(84px);
+        }
+        
+        .box-3d-content img:nth-child(4) {
+            transform: rotateX(-90deg) translateZ(84px);
+        }
+        
+        .box-3d-content img:nth-child(5) {
+            transform: rotateX(90deg) translateZ(84px);
+        }
+        
+        .box-3d-content img:nth-child(6) {
+            transform: translateZ(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-3d">
+        <div class="box-3d-content" style="transform: translateZ(-85px) rotateY(0deg) rotateX(0deg);">
+            <img src="https://att.miaov.com/pic/000/003/56">
+            <img src="https://att.miaov.com/pic/000/003/56">
+            <img src="https://att.miaov.com/pic/000/003/56">
+            <img src="https://att.miaov.com/pic/000/003/56">
+            <img src="https://att.miaov.com/pic/000/003/56">
+        </div>
+    </div>
+    <script type="text/javascript" src="../../工作/js/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+        var dContent = document.querySelector('.box-3d');
+        var i = 0;
+        dContent.addEventListener('mouseenter', function(e) {
+            getDerict(e, this);
+        });
+        dContent.addEventListener('mouseleave', function(e) {
+            getDerict(e, this);
+        });
+
+        function getDerict(e, obj) {
+            var w = obj.offsetWidth;
+            var h = obj.offsetHeight;
+            var x = e.pageX - obj.offsetLeft - (w / 2);
+            var y = e.pageY - obj.offsetTop - (h / 2);
+            var direction = Math.round(((Math.atan2(y, x) * 180 / Math.PI) + 180) / 90 + 3) % 4;
+            var eventType = e.type;
+            var box3D = obj.querySelector('.box-3d-content');
+
+            if (eventType == 'mouseenter') {
+                switch (direction) {
+                    case 0:
+                        console.log(0);
+                        box3D.style.cssText = "transform:translateZ(-85px) rotateY(0deg) rotateX(-90deg)";
+                        break;
+                    case 1:
+                        console.log(1);
+                        box3D.style.cssText = "transform:translateZ(-85px) rotateY(-90deg) rotateX(0deg)";
+                        break;
+                    case 2:
+                        console.log(2);
+                        box3D.style.cssText = "transform:translateZ(-85px) rotateY(0deg) rotateX(90deg)";
+                        break;
+                    case 3:
+                        console.log(3);
+                        box3D.style.cssText = "transform:translateZ(-85px) rotateY(90deg) rotateX(0deg)";
+                        break;
+                }
+            } else {
+
+                console.log("e:" + direction);
+
+                box3D.style.cssText = "transform:translateZ(-85px) rotateY(0deg) rotateX(0deg)";
+
+                //  switch (direction) {
+                //      case 0:
+                //          console.log(0);
+                //          box3D.style.cssText = "transform:translateZ(-85px) rotateY(0deg) rotateX(90deg)";
+                //          break;
+                //      case 1:
+                //          console.log(1);
+                //          box3D.style.cssText = "transform:translateZ(-85px) rotateY(90deg) rotateX(0deg)";
+                //          break;
+                //      case 2:
+                //          console.log(2);
+                //          box3D.style.cssText = "transform:translateZ(-85px) rotateY(0deg) rotateX(-90deg)";
+                //          break;
+                //      case 3:
+                //          console.log(3);
+                //          box3D.style.cssText = "transform:translateZ(-85px) rotateY(-90deg) rotateX(0deg)";
+                //          break;
+                //  }
+            }
+        }
+    </script>
+</body>
+
+</html>

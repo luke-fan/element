@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+.clearFix {
+    *zoom: 1;
+}
+
+.clearFix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box {
+    *zoom: 1;
+    width: 1000px;
+    height: 100px;
+}
+
+.box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box * {
+    float: left;
+}
+
+.box .box1 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px dashed blue;
+}
+
+.box .box2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.box .box3 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+.box .box4 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.box .box5 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            /*
+                    在父级样式中设置overflow: hidden;
+                    可清楚浮动
+                */
+            overflow: hidden;
+        }
+        
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>

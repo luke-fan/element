@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #d1{
+                width: 100px;
+                height: 100px;
+                background: blue;
+               
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script>
+            var oDiv=document.querySelector('#d1');
+
+            oDiv.onclick=function(){
+                //写一个2和两个2效果是一样的
+                oDiv.style.transform='scale(2)';
+                //oDiv.style.transform='scale(2,2)';
+                console.log(oDiv.offsetWidth,oDiv.offsetHeight);
+            }
+           
+        </script>
+    </body>
+</html>

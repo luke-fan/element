@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title></title>
+    <style>
+        body{
+            -moz-user-select : none;
+            -webkit-user-select: none;
+        }
+    </style>
+</head>
+<!-- 
+        消除左键选中状态:css属性--
+            user-select:none;
+-->
+<body>
+
+	<script type="text/javascript">
+		var num = 0;
+		var timer = null;
+		document.onmousedown = function(){
+			clearInterval(timer);
+			timer = setInterval(function(){
+				num += 1;
+				document.body.innerHTML+= num+' ';
+                
+			},100)
+		}
+		document.onmouseup = function(){
+			clearInterval(timer);
+		}
+        /*
+            去除浏览器的一些默认事件 
+        */
+        function iEsc(){ return false; }
+        function iRec(){ return true; }
+        function DisableKeys() {
+            if(event.ctrlKey || event.shiftKey || event.altKey)  {
+                window.event.returnValue=false;
+                iEsc();
+            }
+        }
+        document.ondragstart=iEsc;
+        document.onkeydown=DisableKeys;
+        document.oncontextmenu=iEsc;
+        if (typeof document.onselectstart !="undefined")
+            document.onselectstart=iEsc;
+        else{
+            //qsyz.net
+            document.onmousedown=iEsc;
+            document.onmouseup=iRec;
+        }
+        function DisableRightClick(www_qsyz_net){
+            if (window.Event){
+                if (www_qsyz_net.which == 2 || www_qsyz_net.which == 3)
+                iEsc();}
+            else  if (event.button == 2 || event.button == 3){
+                event.cancelBubble = true
+                event.returnValue = false;
+                iEsc();
+            }
+        }
+
+
+	</script>	
+</body>
+</html>

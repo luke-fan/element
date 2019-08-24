@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            margin: 100px 100px;
+        }
+        
+        .x {
+            width: 170px;
+            height: 170px;
+            margin: 100px 100px;
+            transform: translateZ(0px) rotateY(-90deg) rotateX(85deg);
+        }
+        
+        .y {
+            width: 170px;
+            height: 170px;
+            margin: 100px 100px;
+            transform: translateZ(0px) rotateY(85deg) rotateX(90deg);
+        }
+        
+        .z {
+            width: 170px;
+            height: 170px;
+            margin: 100px 100px;
+            transform: translateZ(-85px) rotateY(0deg) rotateX(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="box" src="https://att.miaov.com/pic/000/003/56">
+    <div style="position: absolute; left: 10px;top: 500px;">
+        <button>x轴变换</button>
+        <button>y轴变换</button>
+        <button>z轴变换</button>
+    </div>
+    <script>
+        var oImg = document.querySelector('img');
+        var aBtn = document.querySelectorAll('button');
+        aBtn[0].onclick = function() {
+            oImg.className = 'x';
+        }
+        aBtn[1].onclick = function() {
+            oImg.className = 'y';
+        }
+        aBtn[2].onclick = function() {
+            oImg.className = 'z';
+        }
+    </script>
+</body>
+
+</html>

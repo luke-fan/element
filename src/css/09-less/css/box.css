@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+.box {
+  width: 1000px;
+  height: 100px;
+}
+.box * {
+  float: left;
+}
+.box .box1 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px dashed blue;
+}
+.box .box2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.box .box4 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box .box5 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}

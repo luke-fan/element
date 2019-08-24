@@ -1,0 +1,47 @@
+.nav {
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+}
+
+.nav .content {
+    width: 80%;
+    height: 100px;
+    background-color: aquamarine;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.nav .content:before {
+    content: url(../../../img/0.png);
+}
+
+.nav .content:after {
+    content: "";
+    display: block;
+    clear: both;
+    *zoom: 1;
+}
+
+.nav .content:hover {
+    height: 200px;
+    background-color: aquamarine;
+}
+
+.nav .content.center {
+    background-color: #EEEEEE;
+}
+
+.nav .content .left {
+    width: 40%;
+    height: 100px;
+    background-color: aliceblue;
+    float: left;
+}
+
+.nav .content .right {
+    width: 40%;
+    height: 100px;
+    background-color: antiquewhite;
+    float: right;
+}

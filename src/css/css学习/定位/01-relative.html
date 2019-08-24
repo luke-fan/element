@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+            }
+            .div1{
+                background-color: red;
+            }
+
+            .div3{
+                position: relative;
+                top: 100px;
+                left: 100px;
+                background-color: blue;
+            }
+            .div4{
+                background-color: yellow;
+            }
+        </style>
+        <!-- 
+            相对定位特征:
+            a:不影响运输本身的特性
+            b:不使元素脱离最高文档流(元素移动之后原始位置会被保留)
+            c:如果没有定位偏移量，对元素本身没有任何影响
+            d:提升层级
+
+         -->
+
+    </head>
+    <body>
+        <div class="div1"></div>
+        
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </body>
+</html>

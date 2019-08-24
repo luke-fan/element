@@ -1,0 +1,7 @@
+@height : 'document.documentElement.clientHeight';
+
+body{
+    margin: 0;
+    height: 100px;
+    background-color: #899;
+}

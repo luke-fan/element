@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>动漫小姐姐介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        ul {
+            display: flex;
+            width: 920px;
+            height: 620px;
+            margin: 50px auto;
+            justify-content: space-around;
+            align-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        ul li {
+            position: relative;
+            overflow: hidden;
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+            transition: .1s;
+        }
+        
+        ul li img {
+            width: 100%;
+            height: 100%;
+            /*vertical-align: top;*/
+        }
+        
+        ul li div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /*配合margin:auto将每个div居中*/
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-color: rgba(0, 0, 0, .3);
+            color: #eee;
+            font-size: 14px;
+            text-align: center;
+            line-height: 200px;
+        }
+        
+        ul li:hover {
+            box-shadow: 0 0 10px #666;
+        }
+        
+        ul li:nth-of-type(1):hover div {
+            opacity: 1;
+            animation: top-left .8s;
+        }
+        
+        @keyframes top-left {
+            0% {
+                top: -200px;
+                left: -300px;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+        
+        ul li:nth-of-type(2):hover div {
+            opacity: 1;
+            animation: top-cent .8s;
+        }
+        
+        @keyframes top-right {
+            0% {
+                top: -200px;
+                left: 300px;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+        
+        ul li:nth-of-type(3):hover div {
+            opacity: 1;
+            animation: top-right .8s;
+        }
+        
+        @keyframes top-cent {
+            0% {
+                top: -200px;
+            }
+            100% {
+                top: 0;
+            }
+        }
+        
+        ul li:nth-of-type(4):hover div {
+            opacity: 1;
+            animation: left .8s;
+        }
+        
+        @keyframes left {
+            0% {
+                left: -300px;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+        
+        ul li:nth-of-type(5):hover div {
+            opacity: 1;
+            animation: cent .4s;
+        }
+        
+        @keyframes cent {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            100% {
+                width: 100%;
+                height: 100%;
+                transform: rotate(360deg);
+            }
+        }
+        
+        ul li:nth-of-type(6):hover div {
+            opacity: 1;
+            animation: right .8s;
+        }
+        
+        @keyframes right {
+            0% {
+                left: 300px;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+        
+        ul li:nth-of-type(7):hover div {
+            opacity: 1;
+            animation: bottom-left .8s;
+        }
+        
+        @keyframes bottom-left {
+            0% {
+                top: 200px;
+                left: -300px;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+        
+        ul li:nth-of-type(8):hover div {
+            opacity: 1;
+            animation: bottom-cent .8s;
+        }
+        
+        @keyframes bottom-cent {
+            0% {
+                top: 200px;
+            }
+            100% {
+                top: 0;
+            }
+        }
+        
+        ul li:nth-of-type(9):hover div {
+            opacity: 1;
+            animation: bottom-right .8s;
+        }
+        
+        @keyframes bottom-right {
+            0% {
+                top: 200px;
+                left: 300px;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>知道这是哪个妹子吗</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>我滴小妹妹</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>没看过的吾王大人</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>智障女神</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>某科学的打炮小姐姐</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>我从来没看过那部动漫的小姐姐</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>这是我的</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>这也是我的</div>
+            </li>
+            <li>
+                <img src="../../images/003.jpg" alt="">
+                <div>萝莉御姐女王</div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
